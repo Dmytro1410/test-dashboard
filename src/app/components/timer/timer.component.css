@@ -1,0 +1,34 @@
+.timer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.timer-line {
+    display: flex;
+    flex-direction: row;
+}
+
+.timer-line button {
+    margin: 0 10px;
+}
+
+.timer-line-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.timer-block {
+    margin: 10px;
+}
+
+
+.time-item-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 20px;
+}

@@ -1,0 +1,90 @@
+<div class="timer-container">
+    <div class="timer-line">
+        <mat-card class="timer-block">
+            <mat-card-header><h2>Current Timer</h2></mat-card-header>
+            <mat-card-content>
+                <div class="timer-line-container">
+                    <div class="time-item-container">
+                        <div>Hours</div>
+                        <h1>{{timerCount | timerPipe: 'h'}}</h1>
+                    </div>
+                    <div class="time-item-container">
+                        <div>Minutes</div>
+                        <h1>{{timerCount | timerPipe: 'm'}}</h1>
+                    </div>
+                    <div class="time-item-container">
+                        <div>Seconds</div>
+                        <h1>{{timerCount | timerPipe: 's'}}</h1>
+                    </div>
+                </div>
+            </mat-card-content>
+        </mat-card>
+
+        <mat-card class="timer-block">
+            <mat-card-header><h2>Total Timer</h2></mat-card-header>
+            <mat-card-content>
+                <div class="timer-line-container">
+                    <div class="time-item-container">
+                        <div>Hours</div>
+                        <h1>{{result | timerPipe: 'h'}}</h1>
+                    </div>
+                    <div class="time-item-container">
+                        <div>Minutes</div>
+                        <h1>{{result | timerPipe: 'm'}}</h1>
+                    </div>
+                    <div class="time-item-container">
+                        <div>Seconds</div>
+                        <h1>{{result | timerPipe: 's'}}</h1>
+                    </div>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+
+    <div class="timer-line">
+        <mat-card class="timer-block">
+            <mat-card-header><h2>Current Time</h2></mat-card-header>
+            <mat-card-content>
+                <div class="timer-line-container">
+                    <div class="time-item-container">
+                        <div>Hours</div>
+                        <h1>{{currentTime! | timerPipe: 'h'}}</h1>
+                    </div>
+                    <div class="time-item-container">
+                        <div>Minutes</div>
+                        <h1>{{currentTime! | timerPipe: 'm'}}</h1>
+                    </div>
+                    <div class="time-item-container">
+                        <div>Seconds</div>
+                        <h1>{{currentTime! | timerPipe: 's'}}</h1>
+                    </div>
+                </div>
+            </mat-card-content>
+        </mat-card>
+        <mat-card class="timer-block">
+            <mat-card-header><h2>Idle Timer</h2></mat-card-header>
+            <mat-card-content>
+                <div class="timer-line-container">
+                    <div class="time-item-container">
+                        <div>Hours</div>
+                        <h1>{{idleTimer! | timerPipe: 'h'}}</h1>
+                    </div>
+                    <div class="time-item-container">
+                        <div>Minutes</div>
+                        <h1>{{idleTimer! | timerPipe: 'm'}}</h1>
+                    </div>
+                    <div class="time-item-container">
+                        <div>Seconds</div>
+                        <h1>{{idleTimer! | timerPipe: 's'}}</h1>
+                    </div>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+
+    <div class="timer-line">
+        <button (click)="startTimer()" color="primary" mat-raised-button>Start Timer</button>
+        <button (click)="stopTimer()" color="warn" mat-raised-button>Stop Timer</button>
+    </div>
+
+</div>
